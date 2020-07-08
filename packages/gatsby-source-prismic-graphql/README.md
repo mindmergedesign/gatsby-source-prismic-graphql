@@ -36,20 +36,20 @@ Please **be sure your Prismic repository has the GraphQL API enabled**. It is en
 **Install the plugin**
 
 ```bash
-npm install --save gatsby-source-prismic-graphql
+npm install --save @prismicio/gatsby-source-prismic-graphql
 ```
 
 or
 
 ```bash
-yarn add gatsby-source-prismic-graphql
+yarn add @prismicio/gatsby-source-prismic-graphql
 ```
 
 **Add plugin to `gatsby-config.js` and configure**
 
 ```js
 {
-  resolve: 'gatsby-source-prismic-graphql',
+  resolve: '@prismicio/gatsby-source-prismic-graphql',
   options: {
     repositoryName: 'gatsby-source-prismic-test-site', // required
     defaultLang: 'en-us', // optional, but recommended
@@ -76,7 +76,7 @@ yarn add gatsby-source-prismic-graphql
 **Edit your `gatsby-browser.js`**
 
 ```js
-const { registerLinkResolver } = require('gatsby-source-prismic-graphql');
+const { registerLinkResolver } = require('@prismicio/gatsby-source-prismic-graphql');
 const { linkResolver } = require('./src/utils/linkResolver');
 
 registerLinkResolver(linkResolver);
